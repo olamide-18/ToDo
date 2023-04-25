@@ -1,0 +1,61 @@
+.to-do{
+    position: fixed;
+    top: auto;
+    width: 325px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 3px 0.5px #64646455;
+    border-radius: 20px;
+    left: 50%;
+    margin-left: -162.5px;
+    margin-top: 100px;
+}
+.todo-list{
+    height: 50vh;
+    padding: 20px;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.todo-list::-webkit-scrollbar{
+    background-color: transparent;
+    width: 10px;
+}   
+
+.todo-list::-webkit-scrollbar-thumb{
+    background-color: #ababab;
+    border-radius: 10px;
+}
+
+.todo {
+    padding: 10px;
+    display: flex;
+}
+.todo input{
+    padding: 20px;
+    border-radius: 10px 0px 0px 10px;
+    border: 1px solid #eee;
+    outline: none !important;
+    transition: 0.2s ease border;
+}
+.todo button{
+    background-color: dodgerblue;
+    color: white;
+    outline: none !important;
+    border: none;
+    border-radius: 0px 10px 10px 0px;
+    padding: 0px 15px;
+}
+
+.task{
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    transition: 0.3s ease all;
+}
+
+.task span{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 10px;
+}
