@@ -23,27 +23,31 @@ function createTask(){
     }
 
     function createNewTask(){
-        let task = document.createElement("div");
-        let task_check = document.createElement("input");
-        let task_info = document.createElement("span"); 
+        // let task = document.createElement("div");
+        // let task_check = document.createElement("input");
+        // let task_info = document.createElement("span"); 
         
-        // Give them Classes
-        task.classList.add("task");
-        task_info.classList.add("task_name");
+        // // Give them Classes
+        // task.classList.add("task");
+        // task_info.classList.add("task_name");
     
-        // give the span element a value
-        task_info.innerHTML = `<b><i>${task_input.value}<i/><b>`;
+        // // give the span element a value
+        // task_info.innerHTML = `<b><i>${task_input.value}<i/><b>`;
         
-        // specify input type
-        task_check.type = "checkbox"
-        task_check.onclick = endTask;
+        // // specify input type
+        // task_check.type = "checkbox"
+        // task_check.onclick = endTask;
     
-        // put the input:checkbox and the span element in the div
-        task.appendChild(task_check);
-        task.appendChild(task_info);
+        // // put the input:checkbox and the span element in the div
+        // task.appendChild(task_check);
+        // task.appendChild(task_info);
     
-        list.appendChild(task);
-        
+        // list.appendChild(task);
+        list.innerHTML += `<div class="task">
+            <input type="checkbox" onclick="endTask(event)">
+            <span class="task_name">${task_input.value}</span>
+        </div>`;
+
         task_input.value = task_input.defaultValue;
     }
     // create HTML components
@@ -53,7 +57,7 @@ function createTask(){
 function endTask(e){
     // this is the task class DIV
     let task = e.target.parentElement;
-
+    
     // These are the children of the div
     let task_info = task.children;
 
